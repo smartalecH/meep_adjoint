@@ -217,7 +217,7 @@ class OptimizationProblem(object):
             If need_value or need_gradient is False, then fq or gradf in the return
             tuple will be None.
         """
-        if beta_vector or design:
+        if (beta_vector is not None) or design:
             self.update_design(beta_vector=beta_vector, design=design)
 
         #######################################################################
